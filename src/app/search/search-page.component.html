@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <form [formGroup]="searchForm" class="mb-5">
+    <div class="col-12 nearByLandmark">
+      <mat-form-field appearance="outline">
+        <mat-label>Search Landmark</mat-label>
+        <input
+          #nearByLandmark
+          formControlName="nearByLandmark"
+          matInput
+          placeholder="Enter near by landmark"
+          autocomplete="off"
+        />
+        <button
+          mat-button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="clearSearchField()"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <!--Search Results layout -->
+      <div class="searchresult" *ngIf="landmarks.length > 0">
+        <p>Suggested Near By Landmark</p>
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            (click)="selectLandmark(landmark)"
+            *ngFor="let landmark of landmarks"
+          >
+            {{ landmark.name }}
+          </li>
+        </ul>
+      </div>
+      <!--Search Results layout -->
+    </div>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+.container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* LandMark */
+
+.nearByLandmark {
+    margin-bottom: 15px;
+}
+
+.nearByLandmark p {
+    padding: .5rem 1.25rem;
+    font-size: 12px;
+    margin: 0px;
+}
+
+.nearByLandmark ::ng-deep .mat-form-field {
+    display: block;
+}
+
+.nearByLandmark ::ng-deep .mat-form-field.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.nearByLandmark .searchresult {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.nearByLandmark .list-group-item:hover {
+    background-color: #F29834;
+    color: #FFFFFF;
+  }
